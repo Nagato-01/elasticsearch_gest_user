@@ -1,6 +1,6 @@
-const express = require('express');
-const db = require('./database');
-const { error } = require('winston');
+import express from 'express';
+import db from './database.js';
+
 const router = express.Router();
 
 
@@ -59,4 +59,4 @@ router.delete('/:id', (req, res) => {
     });
 });
 
-module.exports = router;
+export default router;
