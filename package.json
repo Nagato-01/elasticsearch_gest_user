@@ -1,0 +1,34 @@
+{
+  "name": "gest_user",
+  "version": "1.0.0",
+  "description": "gestion des utilisateurs",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "mocha --require esm 'test/**/*.test.mjs'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nagato-01/elasticsearch_gest_user.git"
+  },
+  "author": "Nalf Nagato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nagato-01/elasticsearch_gest_user/issues"
+  },
+  "homepage": "https://github.com/Nagato-01/elasticsearch_gest_user#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7",
+    "winston": "^3.13.1"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "chai-http": "^5.0.0",
+    "mocha": "^10.7.0"
+  }
+}
