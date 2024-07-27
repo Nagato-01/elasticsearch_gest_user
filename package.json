@@ -1,0 +1,22 @@
+{
+  "name": "gest_user",
+  "version": "1.0.0",
+  "description": "gestion des utilisateurs",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nagato-01/elasticsearch_gest_user.git"
+  },
+  "author": "Nalf Nagato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nagato-01/elasticsearch_gest_user/issues"
+  },
+  "homepage": "https://github.com/Nagato-01/elasticsearch_gest_user#readme"
+}
