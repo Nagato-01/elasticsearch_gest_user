@@ -14,5 +14,8 @@
         // "quotes": ["error", "double"],
         "constructor-super": "error",
         "no-this-before-super": "error"
-    }
+    },
+    "plugins": [
+        "mocha"
+    ]
 }
