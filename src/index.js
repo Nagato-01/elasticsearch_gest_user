@@ -7,15 +7,30 @@ const app = express();
 const port = 5000;
 
 app.use(bodyParser.json());
-app.use('/users', userRoutes);
 
 app.use((req, res, next) => {
-    logger.info(`${req.method} ${req.url}`);
+    const start = Date.now();
+    res.on('finish', () => {
+        const duration = Date.now() - start;
+        logger.info(`${req.method} ${req.url} - ${res.statusCode} - ${duration}ms`);
+    });
+    next();
+});
+
+app.use('/users', userRoutes);
+
+app.use((err, req, res, next) => {
+    console.log("test");
+    logger.error(`${req.method} ${req.url} - ${err.message}`);
+    res.status(500).json({ error: err.message });
     next();
 });
 
 app.listen(port, () => {
     logger.info(`Server is running on http://localhost:${port}`);
+    console.log(`Server is running on http://localhost:${port}`);
 });
+
+logger.info('Je test mes logs');
 
 export default app;
